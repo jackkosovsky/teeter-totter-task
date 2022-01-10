@@ -1,0 +1,247 @@
+@import "flying-gradient.scss";
+
+.content {
+  display: flex;
+  justify-content: space-evenly;
+  max-width: 800px;
+  margin: 0 auto;
+  height: 90vh;
+
+
+  .game-title {
+    margin-bottom: -5px;
+    font-size: 40px;
+    color: white;
+    text-shadow: 1px 1px 2px #00000054
+  }
+
+  .game-place {
+    min-height: 600px;
+    border: 1px solid #1266f13d;
+    border-radius: 15px;
+    overflow: hidden;
+    padding-top: 40px;
+    background: #f8fcff;
+
+    .start-btn {
+      margin-top: 40vh
+    }
+  }
+
+  .buttons-top {
+    width: 300px;
+    justify-content: center;
+
+    .b-pause {
+      width: 100px
+    }
+  }
+
+  .buttons-top-2 {
+    width: 300px;
+    justify-content: center;
+    padding-right: 7px
+  }
+
+  .teeter-totter {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    margin-bottom: 0
+  }
+
+  .ground {
+    width: 100%;
+    height: 50px;
+    background: linear-gradient(#732409 39%, rgba(255, 255, 255, 0) 0) 0 0,
+    radial-gradient(circle closest-side, #732409FF 90%, rgba(255, 255, 255, 0) 0) 0 0,
+    radial-gradient(circle closest-side, #732409FF 50%, rgba(255, 255, 255, 0) 0) 65px 0 #1266f1;
+    background-size: 28px 28px;
+    background-repeat: repeat-x;
+    border-top: 5px solid #00a835
+  }
+
+}
+
+.column {
+  width: 34px;
+  height: 190px;
+  position: relative;
+  bottom: 0;
+  background: #d03e12;
+
+  &:after {
+    content: '';
+    width: 0px;
+    height: 0px;
+    border-left: 17px solid transparent;
+    border-right: 17px solid transparent;
+    border-bottom: 10px solid #d03e12;
+    position: absolute;
+    top: -10px
+  }
+}
+
+.plank {
+  height: 10px;
+  width: 100%;
+  background: #d03e12;
+  border-radius: 1.125rem;
+  position: absolute;
+  bottom: 180px;
+  transition: all 1s
+}
+
+.playground {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  display: flex
+}
+
+.hitbox {
+  width: 50%;
+  height: 100px;
+  position: relative;
+  top: -1px;
+
+  .items {
+    transform: rotate(180deg);
+    transform-origin: top;
+    margin-top: 3px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .weight-size {
+      display: flex;
+      width: 100%;
+      height: 100%;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      transform: rotate(180deg)
+    }
+
+    .triangle-part {
+      &-1 {
+        transform: rotate(180deg) translatex(-96%)
+      }
+
+      &-2 {
+        transform: rotate(180deg) translatex(96%)
+      }
+    }
+  }
+}
+
+.objects {
+  width: 100%;
+  height: 1px;
+  position: absolute;
+  top: 100px;
+
+  .object {
+    position: absolute;
+    transition: .1s all
+  }
+}
+
+.object {
+  .inside {
+    height: 100%;
+    width: 100%;
+
+    .weight-size {
+      display: flex;
+      width: 100%;
+      height: 100%;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      position: relative;
+      text-shadow: 1px 1px 2px black
+    }
+
+    &.circle {
+      border-radius: 50%
+    }
+
+    &.inside.triangle {
+      position: relative;
+      background: transparent !important;
+      overflow: hidden;
+      border: none;
+      transform: scale(1);
+
+      .triangle-part {
+        position: absolute;
+        width: 51%;
+        height: 100%;
+        top: 0;
+        z-index: -1 & -1 {
+          left: 0
+        }
+
+        &-2 {
+          right: 0
+        }
+      }
+    }
+  }
+}
+
+.navbar {
+  z-index: 1;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.logo {
+  width: 60px;
+  line-height: 1rem;
+  font-size: 1.2rem;
+  font-weight: 400;
+  color: white;
+  margin-right: 20px;
+  text-shadow: 1px 1px 3px #0000003d
+}
+
+.hamburger {
+  width: 1.5em;
+  height: 1.5em
+}
+
+.about {
+  color: white;
+
+  h2 {
+    text-shadow: 1px 1px 3px #0000003d;
+  }
+
+  code {
+    background: white;
+    padding: 5px 10px;
+    border-radius: 3px;
+    margin-right: 5px
+  }
+}
+
+.form-check {
+  position: absolute;
+  top: 13px;
+}
+
+@media (max-width: 991.98px) {
+
+  .navbar-nav {
+    padding-top: 17px !important;
+    border-top: 1px solid #fff;
+    margin-top: 10px;
+
+    a {
+      padding-bottom: 10px
+    }
+  }
+}
