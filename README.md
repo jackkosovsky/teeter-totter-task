@@ -1,4 +1,4 @@
-# Teeter Totter game. Test task. Link to demo in description of repository
+# Teeter Totter game. Link to demo in description (rules in router)
 
 ## Project setup
 ```
